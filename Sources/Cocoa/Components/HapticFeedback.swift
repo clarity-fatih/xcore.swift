@@ -24,6 +24,7 @@
 
 import UIKit
 
+@available(iOS 10.0, *)
 public final class HapticFeedback {
     private let createGenerator: () -> UIFeedbackGenerator
     private var generator: UIFeedbackGenerator?
@@ -96,6 +97,7 @@ public final class HapticFeedback {
     }
 }
 
+@available(iOS 10.0, *)
 extension HapticFeedback {
     public static func impact(style: UIImpactFeedbackGenerator.FeedbackStyle) -> HapticFeedback {
         switch style {
@@ -119,6 +121,7 @@ extension HapticFeedback {
     public static let selection = HapticFeedback(UISelectionFeedbackGenerator()) { $0.selectionChanged() }
 }
 
+@available(iOS 10.0, *)
 extension HapticFeedback {
     // MARK: UIImpactFeedbackGenerator
     private static let lightImpactFeedbackGenerator = HapticFeedback(UIImpactFeedbackGenerator(style: .light)) { $0.impactOccurred() }

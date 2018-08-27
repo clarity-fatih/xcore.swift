@@ -28,6 +28,7 @@ import ObjectiveC
 // MARK: Current Playback Time monitoring
 
 extension AVPlayer {
+    @available(iOS 10.0, *)
     public var isPlaying: Bool {
         return timeControlStatus == .playing
     }

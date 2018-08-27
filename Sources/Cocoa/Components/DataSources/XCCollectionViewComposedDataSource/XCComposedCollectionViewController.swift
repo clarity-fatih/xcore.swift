@@ -24,6 +24,13 @@
 
 import UIKit
 
+extension UICollectionViewFlowLayout {
+    @available(iOS 9.0, *)
+    public class var automaticSize: CGSize {
+        return CGSize(.greatestFiniteMagnitude)
+    }
+}
+
 open class XCComposedCollectionViewController: UIViewController {
     public private(set) var collectionViewConstraints: NSLayoutConstraint.Edges!
 
