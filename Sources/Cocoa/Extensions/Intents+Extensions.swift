@@ -25,6 +25,7 @@
 import Foundation
 import Intents
 
+@available(iOS 10.0, *)
 extension INIntent {
     /// The donation shortcut interaction.
     ///
@@ -39,6 +40,7 @@ extension INIntent {
     }
 }
 
+@available(iOS 10.0, *)
 extension INIntent {
     private struct AssociatedKey {
         static var customIdentifier = "customIdentifier"
