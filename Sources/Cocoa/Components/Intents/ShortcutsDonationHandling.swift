@@ -48,7 +48,7 @@ extension ShortcutsDonationHandling {
     public func donateShortcut() {
         intent.interaction.donate { error in
             guard let error = error else { return }
-            errorPrint("[\(Self.self)]", "Interaction donation failed: \(error)")
+            Console.error("[\(Self.self)]", "Interaction donation failed: \(error)")
         }
     }
 }
