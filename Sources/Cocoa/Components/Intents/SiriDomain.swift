@@ -27,8 +27,6 @@ import Intents
 @available(iOS 10.0, *)
 open class SiriDomain: Hashable, With {
     private var didUpdateDonations = false
-    private var didUpdateSuggestions = false
-    private var updateDonationsWhenIntentsUpdated = true
     public let identifier: String
     private var dynamicIntents: (() -> [INIntent])? = nil
     /// A list of intents managed by the domain.
@@ -125,7 +123,7 @@ open class SiriDomain: Hashable, With {
         hasher.combine(identifier)
     }
 
-    open static func == (lhs: SiriDomain, rhs: SiriDomain) -> Bool {
+    public static func == (lhs: SiriDomain, rhs: SiriDomain) -> Bool {
         return lhs.hashValue == rhs.hashValue
     }
 }
